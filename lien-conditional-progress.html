@@ -293,7 +293,7 @@
   /* ── Live Preview ──────────────────────────────── */
   function val(id) { return document.getElementById(id) ? document.getElementById(id).value : ''; }
   function blank(str) { return str ? str : '<span class="prev-blank"></span>'; }
-  function blankLine(str) { return str ? str : '________________________________________'; }
+  function blankLine(str) { return str ? str : '&nbsp;'; }
   function blankShort(str) { return str ? str : '________________'; }
   function blankDate(str) {
     if (!str) return '________ ___, 20___';
@@ -365,8 +365,8 @@
               <div class="prev-sig-label">CLAIMANT:</div>
               <div class="prev-sig-name">${blankLine(claimant)}</div>
               <div class="prev-sig-line">
-                <div>By: ________________________________________</div>
-                <div>Title: ________________________________________</div>
+                <div>By: <span style="display:inline-block;width:260px;border-bottom:1px solid #ccc">&nbsp;</span></div>
+                <div>Title: <span style="display:inline-block;width:248px;border-bottom:1px solid #ccc">&nbsp;</span></div>
                 <div>Date: ${blankDate(sigDate)}</div>
               </div>
             </div>
@@ -386,9 +386,9 @@
               </div>
               <div style="margin-top:.3rem">Given under my hand and seal of office this ${blankDate(sigDate)}.</div>
               <div class="prev-notary-sig">
-                <div>________________________________________</div>
+                <div><span style="display:inline-block;width:260px;border-bottom:1px solid #ccc">&nbsp;</span></div>
                 <div>Notary Public, State of Texas</div>
-                <div>My Commission Expires: ________________</div>
+                <div>My Commission Expires: <span style="display:inline-block;width:140px;border-bottom:1px solid #ccc">&nbsp;</span></div>
               </div>
               <div class="prev-notary-seal">[NOTARY SEAL]</div>
             </div>

@@ -1147,6 +1147,9 @@ button { font-family: var(--font-sans); cursor: pointer; }
   min-height: 13px;
   font-size: 10.5px;
   padding-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .prev-blank {
