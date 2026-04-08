@@ -1,7 +1,7 @@
 const PRODUCTS = {
   lien: [
     { id: 'lw-1', name: 'Conditional Lien Waiver — Progress Payment', desc: 'Waive lien rights conditionally upon progress payment receipt. Texas Property Code Ch. 53 statutory form.', price: 14, fmt: 'PDF', detailPage: 'lien-conditional-progress.html' },
-    { id: 'lw-2', name: 'Unconditional Lien Waiver — Progress Payment', desc: 'Fully release lien rights upon progress payment. Required by most GCs before releasing funds.', price: 14, fmt: 'PDF' },
+    { id: 'lw-2', name: 'Unconditional Lien Waiver — Progress Payment', desc: 'Fully release lien rights upon progress payment. Required by most GCs before releasing funds.', price: 14, fmt: 'PDF', detailPage: 'lien-unconditional-progress.html' },
     { id: 'lw-3', name: 'Conditional Lien Waiver — Final Payment', desc: 'Conditional final payment waiver. Protects your lien rights until the check actually clears.', price: 14, fmt: 'PDF' },
     { id: 'lw-4', name: 'Unconditional Lien Waiver — Final Payment', desc: 'Full and final release of all lien rights upon receipt of final payment. Chapter 53 statutory form.', price: 14, fmt: 'PDF' },
     { id: 'lw-5', name: "Texas Mechanic's Lien Affidavit", desc: 'Pre-formatted for county clerk filing. Enforce your right to payment on any Texas project.', price: 19, fmt: 'PDF' },
