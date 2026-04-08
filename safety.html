@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSHA Logs & Safety Forms for Texas Contractors | TexasDocVault</title>
+  <meta name="description" content="OSHA 300, 300A, and 301 Excel templates plus safety forms for Texas construction contractors. Auto-calculating incident rates. Stay compliant and avoid costly citations."/>
+  <meta name="keywords" content="OSHA 300 log Excel template, OSHA 300A annual summary Excel, OSHA 301 incident report, construction safety forms Texas, OSHA recordkeeping small contractor"/>
+  <link rel="canonical" href="https://texasdocvault.com/safety.html"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<div class="site-layout">
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <div class="site-body">
+    <main class="main-content">
+
+      <div class="cat-hero">
+        <h1>Safety Paperwork</h1>
+        <p>OSHA-compliant recordkeeping logs and safety forms for Texas contractors of all sizes. Stay compliant, document your safety program, and avoid costly OSHA citations.</p>
+      </div>
+
+      <div style="background:#fdf0e8;border-left:4px solid #bf4e0a;padding:1.1rem 3rem;font-size:13.5px;color:#5a3010;line-height:1.6">
+        <strong>Who must keep OSHA 300 logs?</strong> Most employers with 11 or more employees in construction must maintain OSHA injury and illness records. The 300A annual summary must be posted February 1–April 30 every year.
+      </div>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Safety Documents &amp; OSHA Logs</h2>
+        </div>
+        <div class="product-grid" id="safety-grid"></div>
+      </section>
+
+      <!-- OSHA GUIDE -->
+      <section class="section" style="background:#f8f7f4;border-top:1px solid #e2ddd6;padding-top:2rem;padding-bottom:2rem">
+        <h2 class="section-title" style="margin-bottom:1.25rem">OSHA Recordkeeping Quick Guide</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem">
+          <div style="background:#fff;border:1px solid #e2ddd6;border-radius:12px;padding:1.25rem">
+            <div style="font-weight:500;color:#bf4e0a;margin-bottom:.4rem;font-size:14px">OSHA 300 — The Log</div>
+            <div style="font-size:13px;color:#7a7570;line-height:1.6">Record each work-related injury or illness throughout the year. Must be maintained and available for OSHA inspection within 4 hours of request.</div>
+          </div>
+          <div style="background:#fff;border:1px solid #e2ddd6;border-radius:12px;padding:1.25rem">
+            <div style="font-weight:500;color:#bf4e0a;margin-bottom:.4rem;font-size:14px">OSHA 300A — Summary</div>
+            <div style="font-size:13px;color:#7a7570;line-height:1.6">Annual summary of all recordable incidents. Must be certified by a company executive and posted from Feb 1 to Apr 30.</div>
+          </div>
+          <div style="background:#fff;border:1px solid #e2ddd6;border-radius:12px;padding:1.25rem">
+            <div style="font-weight:500;color:#bf4e0a;margin-bottom:.4rem;font-size:14px">OSHA 301 — Incident Report</div>
+            <div style="font-size:13px;color:#7a7570;line-height:1.6">Detailed report for each recordable injury or illness. Must be completed within 7 calendar days of learning of the incident.</div>
+          </div>
+          <div style="background:#fff;border:1px solid #e2ddd6;border-radius:12px;padding:1.25rem">
+            <div style="font-weight:500;color:#bf4e0a;margin-bottom:.4rem;font-size:14px">Retention Requirements</div>
+            <div style="font-size:13px;color:#7a7570;line-height:1.6">Keep all OSHA records for 5 years following the end of the calendar year they cover. Our Excel workbooks make this easy.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="trust-bar">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5.5 2.2V8c0 3.2-2.8 5.5-5.5 6-2.7-.5-5.5-2.8-5.5-6V3.7L8 1.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          OSHA-Compliant Recordkeeping
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 8l2 2 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          Auto-Calculates Incident Rates
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Dropdown Menus for Faster Entry
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+
+<div id="cart-overlay-slot"></div>
+<div id="toast-slot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/components.js"></script>
+<script>
+  initPage('safety');
+  document.getElementById('safety-grid').innerHTML = PRODUCTS.safety.map(productCardHTML).join('');
+</script>
+</body>
+</html>

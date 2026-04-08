@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Texas Construction Blog — Lien Law, Contracts, OSHA & Market Trends | TexasDocVault</title>
+  <meta name="description" content="Up-to-date insights on Texas construction law, mechanic's lien rights, subcontractor agreements, OSHA compliance, pay applications, and market trends for Texas contractors."/>
+  <meta name="keywords" content="Texas construction blog, Texas lien law, Texas contractor tips, OSHA construction Texas, Texas subcontractor advice, construction market Texas 2025"/>
+  <link rel="canonical" href="https://texasdocvault.com/blog.html"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<div class="site-layout">
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <div class="site-body">
+    <main class="main-content">
+
+      <div class="cat-hero">
+        <h1>Texas Construction Blog</h1>
+        <p>Up-to-date insights on Texas construction law, lien rights, contract tips, OSHA compliance, and market trends for residential and commercial contractors across the Lone Star State.</p>
+      </div>
+
+      <!-- CATEGORY FILTER -->
+      <div style="padding:1.25rem 3rem;background:#fff;border-bottom:1px solid #e2ddd6;display:flex;gap:.75rem;flex-wrap:wrap">
+        <button onclick="filterBlog('all', this)" style="background:#bf4e0a;color:#fff;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer" id="filter-all">All Topics</button>
+        <button onclick="filterBlog('Lien Law', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">Lien Law</button>
+        <button onclick="filterBlog('Contracts', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">Contracts</button>
+        <button onclick="filterBlog('Billing', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">Billing</button>
+        <button onclick="filterBlog('OSHA', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">OSHA</button>
+        <button onclick="filterBlog('Commercial', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">Commercial</button>
+        <button onclick="filterBlog('Residential', this)" style="background:#f0ede8;color:#3d3a36;border:none;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer">Residential</button>
+      </div>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Latest Articles</h2>
+          <span id="blog-count" style="font-size:13px;color:#7a7570"></span>
+        </div>
+        <div class="blog-grid" id="blog-grid"></div>
+        <div id="no-results" style="display:none;text-align:center;padding:3rem;color:#7a7570;font-size:15px">No articles found in this category yet. Check back soon!</div>
+      </section>
+
+      <!-- NEWSLETTER SIGNUP -->
+      <section style="background:#0a1e3d;padding:3rem;color:#fff;text-align:center">
+        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:500;margin-bottom:.75rem">Stay Ahead of Texas Construction Law</h2>
+        <p style="color:rgba(255,255,255,.65);font-size:14px;max-width:440px;margin:0 auto 1.75rem;line-height:1.7">Get new articles, legal updates, and a free Daily Work Log template delivered to your inbox. No spam, unsubscribe anytime.</p>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;max-width:420px;margin:0 auto">
+          <input type="email" id="email-input" placeholder="yourname@company.com" style="flex:1;min-width:200px;padding:11px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-size:14px;outline:none"/>
+          <button onclick="subscribeEmail()" style="background:#bf4e0a;color:#fff;border:none;border-radius:8px;padding:11px 22px;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap">Subscribe + Free Template</button>
+        </div>
+        <div id="subscribe-msg" style="margin-top:.75rem;font-size:13px;color:rgba(255,255,255,.6);min-height:20px"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+
+<div id="cart-overlay-slot"></div>
+<div id="toast-slot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/components.js"></script>
+<script>
+  initPage('blog');
+
+  let currentFilter = 'all';
+
+  function renderBlog(filter) {
+    const posts = filter === 'all' ? BLOG_POSTS : BLOG_POSTS.filter(p => p.cat === filter);
+    const grid = document.getElementById('blog-grid');
+    const noResults = document.getElementById('no-results');
+    const count = document.getElementById('blog-count');
+
+    if (posts.length === 0) {
+      grid.innerHTML = '';
+      noResults.style.display = 'block';
+      count.textContent = '';
+    } else {
+      grid.innerHTML = posts.map(blogCardHTML).join('');
+      noResults.style.display = 'none';
+      count.textContent = posts.length + (posts.length === 1 ? ' article' : ' articles');
+    }
+  }
+
+  function filterBlog(cat, btn) {
+    currentFilter = cat;
+    document.querySelectorAll('[onclick^="filterBlog"]').forEach(b => {
+      b.style.background = '#f0ede8';
+      b.style.color = '#3d3a36';
+    });
+    btn.style.background = '#bf4e0a';
+    btn.style.color = '#fff';
+    renderBlog(cat);
+  }
+
+  function subscribeEmail() {
+    const email = document.getElementById('email-input').value.trim();
+    const msg = document.getElementById('subscribe-msg');
+    if (!email || !email.includes('@')) {
+      msg.textContent = 'Please enter a valid email address.';
+      msg.style.color = '#f5a87a';
+      return;
+    }
+    msg.textContent = "You're subscribed! Check your email for your free Daily Work Log template.";
+    msg.style.color = '#9fe1cb';
+    document.getElementById('email-input').value = '';
+  }
+
+  renderBlog('all');
+  document.getElementById('blog-count').textContent = BLOG_POSTS.length + ' articles';
+</script>
+</body>
+</html>
