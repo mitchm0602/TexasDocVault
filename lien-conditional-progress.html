@@ -107,6 +107,11 @@
             </div>
 
             <div class="pdp-field-group">
+              <label class="pdp-label">Job Description / Scope of Work <span class="pdp-req">*</span></label>
+              <textarea class="pdp-input pdp-textarea" id="f-scope" placeholder="e.g. Rough-in and finish plumbing for 3-story commercial build" oninput="updatePreview()"></textarea>
+            </div>
+
+            <div class="pdp-field-group">
               <label class="pdp-label">Exceptions (if any)</label>
               <textarea class="pdp-input pdp-textarea" id="f-exceptions" placeholder="List any exceptions to this waiver, or leave blank for 'None'" oninput="updatePreview()"></textarea>
             </div>
@@ -255,7 +260,9 @@
     const thruDate = document.getElementById('f-through-date').value;
     const amount   = document.getElementById('f-amount').value.trim();
 
-    if (!claimant || !customer || !owner || !location || !thruDate || !amount) {
+    const scope    = document.getElementById('f-scope').value.trim();
+
+    if (!claimant || !customer || !owner || !location || !thruDate || !amount || !scope) {
       showToast('Please fill out all required fields before adding to cart.');
       return;
     }
@@ -269,6 +276,7 @@
       location,
       throughDate: thruDate,
       amount,
+      scope,
       exceptions: document.getElementById('f-exceptions').value.trim(),
       county: document.getElementById('f-county').value.trim(),
       sigDate: document.getElementById('f-sig-date').value,
@@ -301,6 +309,7 @@
     const location  = val('f-location');
     const thruDate  = val('f-through-date');
     const amount    = val('f-amount');
+    const scope     = val('f-scope');
     const exceptions= val('f-exceptions');
     const county    = val('f-county');
     const sigDate   = val('f-sig-date');
@@ -355,7 +364,7 @@
             the signer&rsquo;s position that the signer has on the job of
             <strong>${blank(owner) || '<span class="prev-blank"></span>'}</strong>
             located at <strong>${blank(location) || '<span class="prev-blank"></span>'}</strong>
-            to the following extent:
+            to the following extent: <strong>${scope || '________________________________________'}</strong>
           </div>
 
           <div class="prev-paragraph">
