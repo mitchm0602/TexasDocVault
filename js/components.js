@@ -195,14 +195,21 @@ function footerHTML() {
 /* ── PRODUCT CARD RENDERER ────────────────────── */
 function productCardHTML(p) {
   const isXL = p.fmt === 'XLSX';
+  const hasDetail = p.detailPage;
+  const actionBtn = hasDetail
+    ? `<a href="${p.detailPage}" class="btn-add" style="text-decoration:none;text-align:center">View Options</a>`
+    : `<button class="btn-add" onclick="addToCart('${p.id}', '${p.name.replace(/'/g, "\\'")}', ${p.price})">Add to Cart</button>`;
+  const nameHTML = hasDetail
+    ? `<a href="${p.detailPage}" class="product-name" style="text-decoration:none;color:inherit">${p.name}</a>`
+    : `<div class="product-name">${p.name}</div>`;
   return `
   <div class="product-card">
     <div class="product-icon ${isXL ? 'icon-xlsx' : 'icon-pdf'}">${p.fmt}</div>
-    <div class="product-name">${p.name}</div>
-    <div class="product-desc">${p.desc}</div>
+    ${nameHTML}
+    <div class="product-desc">${p.desc}${hasDetail ? '<br/><span style="color:var(--accent);font-size:11.5px;font-weight:500">Pre-filled or blank template available</span>' : ''}</div>
     <div class="product-footer">
-      <span class="product-price">$${p.price} <span class="fmt-badge ${isXL ? 'fmt-xlsx' : 'fmt-pdf'}">${p.fmt}</span></span>
-      <button class="btn-add" onclick="addToCart('${p.id}', '${p.name.replace(/'/g, "\\'")}', ${p.price})">Add to Cart</button>
+      <span class="product-price">from $${hasDetail ? '10' : p.price} <span class="fmt-badge ${isXL ? 'fmt-xlsx' : 'fmt-pdf'}">${p.fmt}</span></span>
+      ${actionBtn}
     </div>
   </div>`;
 }
