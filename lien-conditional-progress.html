@@ -391,21 +391,18 @@
             <div class="prev-notary-body">
               <div>STATE OF TEXAS</div>
               <div>COUNTY OF ${county ? county.toUpperCase() : '________________'}</div>
-              <br/>
-              <div>
+              <div style="margin-top:.3rem">
                 Before me, the undersigned notary public, on this day personally appeared
                 <strong>${blank(claimant) || '________________________________'}</strong>,
                 known to me (or proved to me on the basis of satisfactory evidence) to be the person
                 whose name is subscribed to the within instrument and acknowledged to me that he/she
                 executed the same for the purposes and consideration therein expressed.
               </div>
-              <br/>
-              <div>Given under my hand and seal of office this ${blankDate(sigDate)}.</div>
-              <br/>
+              <div style="margin-top:.3rem">Given under my hand and seal of office this ${blankDate(sigDate)}.</div>
               <div class="prev-notary-sig">
                 <div>________________________________________</div>
                 <div>Notary Public, State of Texas</div>
-                <div style="margin-top:8px">My Commission Expires: ________________</div>
+                <div>My Commission Expires: ________________</div>
               </div>
               <div class="prev-notary-seal">[NOTARY SEAL]</div>
             </div>
