@@ -5,9 +5,9 @@ const PRODUCTS = {
     { id: 'lw-3', name: 'Conditional Lien Waiver — Final Payment', desc: 'Conditional final payment waiver. Protects your lien rights until the check actually clears.', price: 14, fmt: 'PDF', detailPage: 'lien-conditional-final.html' },
     { id: 'lw-4', name: 'Unconditional Lien Waiver — Final Payment', desc: 'Full and final release of all lien rights upon receipt of final payment. Chapter 53 statutory form.', price: 14, fmt: 'PDF', detailPage: 'lien-unconditional-final.html' },
     { id: 'lw-5', name: "Texas Mechanic's Lien Affidavit", desc: 'Pre-formatted for county clerk filing. Enforce your right to payment on any Texas project.', price: 19, fmt: 'PDF', detailPage: 'lien-affidavit.html' },
-    { id: 'lw-6', name: 'Preliminary Notice / Notice to Owner', desc: 'Preserve your lien rights from day one. Should be sent before or immediately after work begins.', price: 12, fmt: 'PDF' },
-    { id: 'lw-7', name: 'Lien Demand Letter', desc: 'Professional demand letter to compel payment before escalating to lien enforcement.', price: 12, fmt: 'PDF' },
-    { id: 'lw-8', name: 'Notice of Commencement', desc: 'Filed by the property owner or GC to establish lien priority on the project.', price: 12, fmt: 'PDF' },
+    { id: 'lw-6', name: 'Preliminary Notice / Notice to Owner', desc: 'Preserve your lien rights from day one. Should be sent before or immediately after work begins.', price: 12, fmt: 'PDF', detailPage: 'preliminary-notice.html' },
+    { id: 'lw-7', name: 'Lien Demand Letter', desc: 'Professional demand letter to compel payment before escalating to lien enforcement.', price: 12, fmt: 'PDF', detailPage: 'lien-demand-letter.html' },
+    { id: 'lw-8', name: 'Notice of Commencement', desc: 'Filed by the property owner or GC to establish lien priority on the project.', price: 12, fmt: 'PDF', detailPage: 'notice-of-commencement.html' },
   ],
   contract: [
     { id: 'co-1', name: 'Subcontractor Agreement — General', desc: 'Comprehensive subcontractor agreement covering scope, payment terms, insurance, indemnification, and dispute resolution.', price: 29, fmt: 'PDF' },
