@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preliminary Notice / Notice to Owner | TexasDocVault</title>
+  <meta name="description" content="Texas Preliminary Notice to Owner. Preserve your mechanic's lien rights by sending notice to the property owner. Compliant with Texas Property Code §53.056. Certified mail ready."/>
+  <meta name="keywords" content="preliminary notice Texas, notice to owner Texas, Texas Property Code 53.056, mechanic lien notice, subcontractor notice to owner"/>
+  <link rel="canonical" href="https://texasdocvault.com/preliminary-notice.html"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<div class="site-layout">
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <div class="site-body">
+    <main class="main-content">
+
+      <!-- BREADCRUMB -->
+      <div class="pdp-breadcrumb">
+        <a href="lien.html">Lien Paperwork</a>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6l-3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <span>Preliminary Notice</span>
+      </div>
+
+      <!-- PRODUCT HEADER -->
+      <div class="pdp-header">
+        <div class="pdp-header-left">
+          <div class="product-icon icon-pdf" style="width:48px;height:48px;font-size:12px">PDF</div>
+          <div>
+            <h1 class="pdp-title">Preliminary Notice / Notice to Owner</h1>
+            <p class="pdp-subtitle">Texas Property Code §53.056 &middot; Preserves Lien Rights &middot; Certified Mail Ready</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PURCHASE OPTIONS -->
+      <div class="pdp-options">
+        <button class="pdp-option active" data-option="prefilled" onclick="selectOption('prefilled')">
+          <div class="pdp-option-label">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M5 9l2.5 2.5L13 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pre-Filled Notice
+          </div>
+          <div class="pdp-option-desc">Fill out fields below — we generate your completed PDF with mailing certificate</div>
+          <div class="pdp-option-price">$12</div>
+        </button>
+        <button class="pdp-option" data-option="blank" onclick="selectOption('blank')">
+          <div class="pdp-option-label">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="1.5" width="12" height="15" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6 6h6M6 9h6M6 12h4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+            Blank Template
+          </div>
+          <div class="pdp-option-desc">Download an empty fillable PDF — print and complete by hand</div>
+          <div class="pdp-option-price">$8</div>
+        </button>
+      </div>
+
+      <!-- MAIN CONTENT AREA -->
+      <div class="pdp-body">
+
+        <!-- LEFT: FORM -->
+        <div class="pdp-form-col" id="form-col">
+          <div class="pdp-form-panel">
+            <h2 class="pdp-form-heading">Fill Out Your Notice</h2>
+            <p class="pdp-form-note">Complete the fields below. Your entries appear in the live preview on the right. All data stays in your browser — nothing is stored on our servers.</p>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Claimant (Your Company / Name) <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-claimant" placeholder="e.g. ABC Plumbing, LLC" oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Claimant Address <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-claimant-address" placeholder="123 Main St, Dallas, TX 75201" oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Property Owner Name <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-owner" placeholder="e.g. John Smith" oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Owner Address <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-owner-address" placeholder="e.g. 789 Elm St, Austin, TX 78701" oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Original Contractor / GC Name <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-contractor" placeholder="e.g. XYZ General Contractors, Inc." oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Project Address / Description <span class="pdp-req">*</span></label>
+              <input type="text" class="pdp-input" id="f-project" placeholder="e.g. 456 Oak Ave, Houston, TX 77001" oninput="updatePreview()"/>
+            </div>
+
+            <div class="pdp-field-row">
+              <div class="pdp-field-group" style="flex:1">
+                <label class="pdp-label">County <span class="pdp-req">*</span></label>
+                <input type="text" class="pdp-input" id="f-county" placeholder="e.g. Harris" oninput="updatePreview()"/>
+              </div>
+              <div class="pdp-field-group" style="flex:1">
+                <label class="pdp-label">Notice Date</label>
+                <input type="date" class="pdp-input" id="f-notice-date" oninput="updatePreview()"/>
+              </div>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Description of Labor / Materials to be Furnished <span class="pdp-req">*</span></label>
+              <textarea class="pdp-input pdp-textarea" id="f-description" placeholder="e.g. Rough-in and finish plumbing for 3-story commercial build" oninput="updatePreview()"></textarea>
+            </div>
+
+            <div class="pdp-field-group">
+              <label class="pdp-label">Estimated Value of Labor/Materials <span class="pdp-req">*</span></label>
+              <div class="pdp-input-prefix-wrap">
+                <span class="pdp-input-prefix">$</span>
+                <input type="text" class="pdp-input pdp-input-with-prefix" id="f-amount" placeholder="0.00" oninput="formatAmount(this); updatePreview()"/>
+              </div>
+            </div>
+
+            <div class="pdp-form-actions">
+              <button class="btn btn-primary pdp-add-btn" onclick="addPrefilledToCart()">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2h1.5l1.8 7.5h7l1.2-5H4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13.5" r="1.1" fill="white"/><circle cx="12" cy="13.5" r="1.1" fill="white"/></svg>
+                Add Pre-Filled Notice to Cart — $12
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LEFT (BLANK): Simple info panel -->
+        <div class="pdp-form-col pdp-blank-panel" id="blank-col" style="display:none">
+          <div class="pdp-form-panel">
+            <h2 class="pdp-form-heading">Blank Template</h2>
+            <p class="pdp-form-note" style="margin-bottom:1.25rem">Download a blank Preliminary Notice / Notice to Owner. All fields are left empty for you to fill in by hand or with a PDF editor.</p>
+
+            <div class="pdp-blank-features">
+              <div class="pdp-blank-feature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="#1d7a3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Texas Property Code §53.056 compliant
+              </div>
+              <div class="pdp-blank-feature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="#1d7a3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Certified mail certificate included
+              </div>
+              <div class="pdp-blank-feature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="#1d7a3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Fillable fields for handwritten or digital entry
+              </div>
+              <div class="pdp-blank-feature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="#1d7a3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Print-ready letter-size format
+              </div>
+              <div class="pdp-blank-feature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="#1d7a3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Reusable — use on unlimited projects
+              </div>
+            </div>
+
+            <div class="pdp-form-actions">
+              <button class="btn btn-primary pdp-add-btn" onclick="addBlankToCart()">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2h1.5l1.8 7.5h7l1.2-5H4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13.5" r="1.1" fill="white"/><circle cx="12" cy="13.5" r="1.1" fill="white"/></svg>
+                Add Blank Template to Cart — $8
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: LIVE PREVIEW -->
+        <div class="pdp-preview-col">
+          <div class="pdp-preview-bar">
+            <span>Live Document Preview</span>
+          </div>
+          <div class="pdp-preview" id="doc-preview">
+            <!-- Document rendered here by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INFO SECTION -->
+      <section class="section" style="border-top:1px solid var(--gray-200)">
+        <h2 class="section-title" style="margin-bottom:1rem">About This Document</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;font-size:13.5px;color:var(--gray-500);line-height:1.7">
+          <div>
+            <strong style="color:var(--gray-900)">When to Use</strong><br/>
+            Send this notice to the property owner when you are a subcontractor or supplier who does not have a direct contract with the owner. Texas law requires this notice to preserve your mechanic&rsquo;s lien rights. It must be sent by the 15th day of the 2nd month following each month labor was performed or materials delivered.
+          </div>
+          <div>
+            <strong style="color:var(--gray-900)">Legal Basis</strong><br/>
+            This notice complies with Texas Property Code §53.056. Failure to send this notice can result in the complete loss of your mechanic&rsquo;s lien rights. The notice must be sent via certified mail, return receipt requested, to the property owner and the original contractor.
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST BAR -->
+      <div class="trust-bar">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5.5 2.2V8c0 3.2-2.8 5.5-5.5 6-2.7-.5-5.5-2.8-5.5-6V3.7L8 1.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          Texas Property Code §53.056 Compliant
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 8l2 2 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          Certified Mail Certificate Included
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 5.5h5M5.5 8.5h5M5.5 11.5h3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+          Preserves Lien Rights
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l2.5 2.5L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Attorney-Reviewed
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+
+<div id="cart-overlay-slot"></div>
+<div id="toast-slot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/components.js"></script>
+<script>
+  initPage('lien');
+
+  /* ── Option Toggle ─────────────────────────────── */
+  function selectOption(opt) {
+    document.querySelectorAll('.pdp-option').forEach(el => el.classList.remove('active'));
+    document.querySelector(`.pdp-option[data-option="${opt}"]`).classList.add('active');
+    document.getElementById('form-col').style.display = opt === 'prefilled' ? '' : 'none';
+    document.getElementById('blank-col').style.display = opt === 'blank' ? '' : 'none';
+  }
+
+  /* ── Amount Formatting ─────────────────────────── */
+  function formatAmount(el) {
+    let v = el.value.replace(/[^0-9.]/g, '');
+    const parts = v.split('.');
+    if (parts.length > 2) v = parts[0] + '.' + parts.slice(1).join('');
+    el.value = v;
+  }
+
+  /* ── Add to Cart ───────────────────────────────── */
+  function addPrefilledToCart() {
+    const claimant       = document.getElementById('f-claimant').value.trim();
+    const claimantAddr   = document.getElementById('f-claimant-address').value.trim();
+    const owner          = document.getElementById('f-owner').value.trim();
+    const ownerAddr      = document.getElementById('f-owner-address').value.trim();
+    const contractor     = document.getElementById('f-contractor').value.trim();
+    const project        = document.getElementById('f-project').value.trim();
+    const county         = document.getElementById('f-county').value.trim();
+    const description    = document.getElementById('f-description').value.trim();
+    const amount         = document.getElementById('f-amount').value.trim();
+
+    if (!claimant || !claimantAddr || !owner || !ownerAddr || !contractor || !project || !county || !description || !amount) {
+      showToast('Please fill out all required fields before adding to cart.');
+      return;
+    }
+
+    // Store form data in localStorage for later retrieval
+    const formData = {
+      claimant,
+      claimantAddress: claimantAddr,
+      owner,
+      ownerAddress: ownerAddr,
+      contractor,
+      project,
+      county,
+      description,
+      amount,
+      noticeDate: document.getElementById('f-notice-date').value,
+    };
+    localStorage.setItem('tdv_prefill_lw6', JSON.stringify(formData));
+
+    addToCart('lw-6-prefilled', 'Preliminary Notice / Notice to Owner (Pre-Filled)', 12);
+  }
+
+  function addBlankToCart() {
+    addToCart('lw-6-blank', 'Preliminary Notice / Notice to Owner (Blank Template)', 8);
+  }
+
+  /* ── Live Preview ──────────────────────────────── */
+  function val(id) { return document.getElementById(id) ? document.getElementById(id).value : ''; }
+  function blank(str) { return str ? str : '<span class="prev-blank"></span>'; }
+  function blankLine(str) { return str ? str : '&nbsp;'; }
+  function blankShort(str) { return str ? str : '________________'; }
+  function blankDate(str) {
+    if (!str) return '________ ___, 20___';
+    const d = new Date(str + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  }
+
+  function updatePreview() {
+    const claimant     = val('f-claimant');
+    const claimantAddr = val('f-claimant-address');
+    const owner        = val('f-owner');
+    const ownerAddr    = val('f-owner-address');
+    const contractor   = val('f-contractor');
+    const project      = val('f-project');
+    const county       = val('f-county');
+    const description  = val('f-description');
+    const amount       = val('f-amount');
+    const noticeDate   = val('f-notice-date');
+
+    const amountDisplay = amount ? `$${Number(amount).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}` : '$__________';
+
+    document.getElementById('doc-preview').innerHTML = `
+      <div class="prev-doc">
+        <div class="prev-header">PRELIMINARY NOTICE TO OWNER</div>
+        <div class="prev-statute">Texas Property Code §53.056</div>
+
+        <div style="background:#e8f5e9;border-left:3px solid #2e7d32;padding:6px 8px;font-size:8px;color:#1b5e20;margin-bottom:8px;line-height:1.4">
+          <strong>IMPORTANT:</strong> This notice is required to preserve your mechanic&rsquo;s lien rights on this project. Texas law requires subcontractors and suppliers who do not have a direct contract with the property owner to send this notice by the 15th day of the 2nd month following each month in which the labor was performed or material delivered.
+        </div>
+
+        <div class="prev-body">
+          <div class="prev-field-row">
+            <span class="prev-label">Name of Claimant:</span>
+            <span class="prev-value">${blankLine(claimant)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">Claimant Address:</span>
+            <span class="prev-value">${blankLine(claimantAddr)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">Property Owner:</span>
+            <span class="prev-value">${blankLine(owner)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">Owner Address:</span>
+            <span class="prev-value">${blankLine(ownerAddr)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">General Contractor:</span>
+            <span class="prev-value">${blankLine(contractor)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">Project Location:</span>
+            <span class="prev-value">${blankLine(project)}</span>
+          </div>
+          <div class="prev-field-row">
+            <span class="prev-label">County:</span>
+            <span class="prev-value">${blankLine(county)}</span>
+          </div>
+
+          <div class="prev-paragraph">You are hereby notified that the undersigned, <strong>${blank(claimant)}</strong>, has been employed by or has contracted with <strong>${blank(contractor)}</strong> to furnish labor, services, equipment, or materials in connection with the construction or improvement of the property located at <strong>${blank(project)}</strong>, <strong>${county ? county : '________________'}</strong> County, Texas, which property is owned by <strong>${blank(owner)}</strong>.</div>
+
+          <div class="prev-paragraph">The undersigned will furnish or has furnished the following labor, services, equipment, or materials: <strong>${description ? description : '________________________________________'}</strong></div>
+
+          <div class="prev-paragraph">The estimated value of the labor, services, equipment, or materials to be furnished is <strong>${amountDisplay}</strong>.</div>
+
+          <div class="prev-paragraph">This notice is given to preserve the undersigned&rsquo;s rights under Chapter 53 of the Texas Property Code, including the right to file a mechanic&rsquo;s lien on the above-described property.</div>
+
+          <div class="prev-paragraph">This notice is sent in accordance with the requirements of Texas Property Code §53.056 and should not be construed as a reflection on the financial responsibility of any person.</div>
+
+          <div class="prev-sig-section">
+            <div class="prev-sig-block">
+              <div class="prev-sig-label">CLAIMANT:</div>
+              <div class="prev-sig-name">${blankLine(claimant)}</div>
+              <div class="prev-sig-line">
+                <div>By: <span style="display:inline-block;width:260px;border-bottom:1px solid #ccc">&nbsp;</span></div>
+                <div>Title: <span style="display:inline-block;width:248px;border-bottom:1px solid #ccc">&nbsp;</span></div>
+                <div>Date: ${blankDate(noticeDate)}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prev-notary">
+            <div class="prev-notary-title">CERTIFICATE OF MAILING</div>
+            <div class="prev-notary-body">
+              <div style="margin-bottom:.3rem">I certify that a copy of this notice was sent via Certified Mail, Return Receipt Requested, to:</div>
+              <div style="margin-bottom:.2rem">Property Owner: <strong>${blank(owner)}</strong> at <strong>${blank(ownerAddr)}</strong></div>
+              <div style="margin-bottom:.3rem">General Contractor: <strong>${blank(contractor)}</strong> at <span style="display:inline-block;width:200px;border-bottom:1px solid #ccc">&nbsp;</span></div>
+              <div style="margin-bottom:.3rem">on this ${blankDate(noticeDate)}.</div>
+              <div class="prev-notary-sig">
+                <div>By: <span style="display:inline-block;width:260px;border-bottom:1px solid #ccc">&nbsp;</span></div>
+              </div>
+              <div class="prev-notary-seal">[SEAL]</div>
+            </div>
+          </div>
+        </div>
+        <div class="prev-doc-footer">texasdocvault.com</div>
+      </div>
+    `;
+  }
+
+  // Initial render
+  updatePreview();
+</script>
+</body>
+</html>
